@@ -9,12 +9,14 @@ if (is_numeric($_POST["Planet"]) ){
         header("location:../Views/BadRequest.php");
     }
 }elseif(is_numeric($_POST["Planet"]) == false){
-    foreach ($planetas as $key => $planeta) {
-        if ($planeta["nombre"] === strtolower($_POST["Planet"])) {
-            header("location:../Views/Resultado.php?element=".$planeta["nombre"]."&id=".$key);
-        }else{
-            header("location:../Views/BadRequest.php");
-        }
-    }
+    $names = strtolower($_POST["Planet"]);
+     foreach ($planetas as $key => $planeta) {
+         if ($planeta["nombre"] == $names) {
+             header("location:../Views/Resultado.php?element=".$planeta["nombre"]."&id=".$key);
+             break;
+         }else{
+             header("location:../Views/BadRequest.php");
+         }
+     } 
 
 }
