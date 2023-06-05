@@ -19,12 +19,4 @@ if (is_numeric($_POST["Planet"]) ){
          }
      }
 
-  //   foreach ($planetas as $key => $planeta) {
-  //   if ($planeta["nombre"] == $_POST["Planet"]) {
-  //       echo "Nombre del planeta: " . $planeta["nombre"] . "<br>";
-  //       echo "Posición en el array padre: " . $key . "<br>";
-  //       break; // Terminar el bucle si se encuentra el planeta
-  //   }
-  // }
-
 }
