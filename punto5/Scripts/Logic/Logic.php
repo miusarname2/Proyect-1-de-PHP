@@ -18,76 +18,76 @@ function sumarMasa($nav) {
     return $sumaMasa;
 }
 
-// if (isset($_POST["Planet"])) {
-//     if (is_numeric($_POST["Planet"])) {
-//         $index = intval($_POST["Planet"]);
-//         if (isset($planetas[$index])) {
-//             $temp_toReturn = $planetas[$index]["nombre"];
-//             header("Location:../Views/Resultado.php?element=".$temp_toReturn."&id=".$index);
-//         } else {
-//             header("Location:../Views/BadRequest.php");
-//         }
-//     } else {
-//         $names = strtolower($_POST["Planet"]);
-//         $found = false;
-//         foreach ($planetas as $key => $planeta) {
-//             if ($planeta["nombre"] == $names) {
-//                 header("Location:../Views/Resultado.php?element=".$planeta["nombre"]."&id=".$key);
-//                 $found = true;
-//                 break;
-//             }
-//         }
-//         if (!$found) {
-//             header("Location:../Views/BadRequest.php");
-//         }
-//     }
-// } elseif (isset($_POST["habitables"])) {
-//     $habitables = array();
-//     foreach ($planetas as $key => $planeta) {
-//         if ($_POST["habitables"] == 1 && $planeta['habitable']) {
-//             $habitables[] = $planeta['nombre'];
-//         } elseif ($_POST["habitables"] == 2 && !$planeta['habitable']) {
-//             $habitables[] = $planeta['nombre'];
-//         } elseif ($_POST["habitables"] == 3) {
-//             $habitables[] = $planeta['nombre'];
-//         }
-//     }
-//     if (!empty($habitables)) {
-//         header("Location:../Views/habitablesResultados/resultado.php?".http_build_query($habitables));
-//     } else {
-//         header("Location:../Views/BadRequest.php");
-//     }
-// }elseif(isset($_POST["PlanetaG"])){
-//     if (is_numeric($_POST["PlanetaG"])) {
-//         $index = intval($_POST["PlanetaG"]);
-//         if (isset($planetas[$index])) {
-//             $temp_toReturn = $planetas[$index]["nombre"];
-//             $gravity=defGravedad($planetas[$index]["gravedad"]);
-//             header("Location:../Views/PlanetasGravedad/Resultado.php?element=".$temp_toReturn."&id=".$index."&gravedad=".$gravity);
-//         } else {
-//             header("Location:../Views/PlanetasGravedad/BadRequest.php");
-//             }
-//         } else {
-//             $names = strtolower($_POST["PlanetaG"]);
-//             $found = false;
-//             foreach ($planetas as $key => $planeta) {
-//                 if ($planeta["nombre"] == $names) {
-//                     $gravity=defGravedad($planeta["gravedad"]);
-//                     header("Location:../Views/PlanetasGravedad/Resultado.php?element=".$planeta["nombre"]."&id=".$key."&gravedad=".$gravity);
-//                     $found = true;
-//                     break;
-//                 }
-//             }
-//             if (!$found) {
-//                 header("Location:../Views/BadRequest.php");
-//             }
-//         }
-// }
-
-if (isset($_POST["Naves"])){
+if (isset($_POST["Planet"])) {
+    if (is_numeric($_POST["Planet"])) {
+        $index = intval($_POST["Planet"]);
+        if (isset($planetas[$index])) {
+            $temp_toReturn = $planetas[$index]["nombre"];
+            header("Location:../Views/Resultado.php?element=".$temp_toReturn."&id=".$index);
+        } else {
+            header("Location:../Views/BadRequest.php");
+        }
+    } else {
+        $names = strtolower($_POST["Planet"]);
+        $found = false;
+        foreach ($planetas as $key => $planeta) {
+            if ($planeta["nombre"] == $names) {
+                header("Location:../Views/Resultado.php?element=".$planeta["nombre"]."&id=".$key);
+                $found = true;
+                break;
+            }
+        }
+        if (!$found) {
+            header("Location:../Views/BadRequest.php");
+        }
+    }
+} elseif (isset($_POST["habitables"])) {
+    $habitables = array();
+    foreach ($planetas as $key => $planeta) {
+        if ($_POST["habitables"] == 1 && $planeta['habitable']) {
+            $habitables[] = $planeta['nombre'];
+        } elseif ($_POST["habitables"] == 2 && !$planeta['habitable']) {
+            $habitables[] = $planeta['nombre'];
+        } elseif ($_POST["habitables"] == 3) {
+            $habitables[] = $planeta['nombre'];
+        }
+    }
+    if (!empty($habitables)) {
+        header("Location:../Views/habitablesResultados/resultado.php?".http_build_query($habitables));
+    } else {
+        header("Location:../Views/BadRequest.php");
+    }
+}elseif(isset($_POST["PlanetaG"])){
+    if (is_numeric($_POST["PlanetaG"])) {
+        $index = intval($_POST["PlanetaG"]);
+        if (isset($planetas[$index])) {
+            $temp_toReturn = $planetas[$index]["nombre"];
+            $gravity=defGravedad($planetas[$index]["gravedad"]);
+            header("Location:../Views/PlanetasGravedad/Resultado.php?element=".$temp_toReturn."&id=".$index."&gravedad=".$gravity);
+        } else {
+            header("Location:../Views/PlanetasGravedad/BadRequest.php");
+            }
+        } else {
+            $names = strtolower($_POST["PlanetaG"]);
+            $found = false;
+            foreach ($planetas as $key => $planeta) {
+                if ($planeta["nombre"] == $names) {
+                    $gravity=defGravedad($planeta["gravedad"]);
+                    header("Location:../Views/PlanetasGravedad/Resultado.php?element=".$planeta["nombre"]."&id=".$key."&gravedad=".$gravity);
+                    $found = true;
+                    break;
+                }
+            }
+            if (!$found) {
+                header("Location:../Views/BadRequest.php");
+            }
+        }
+}elseif(isset($_POST["Naves"])){
     $temp_masaT=sumarMasa($naves);
     header("Location:../Views/Naves/MasaNave.php?Masa=".$temp_masaT."kg");
 }
+
+
 
 
 
