@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../Css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div id="main">
+        <div id="header"> <a href="#" class="logo"></a>
+          <ul id="top-navigation">
+            <li><span><span><a href="../index.html">Buscador de planetas</a></span></span></li>
+            <li><span><span><a href="./verfiReportFirst.html">Verificar primer reporte de sistema solar</a></span></span></li>
+            <li class="active"><span><span>Verificar planetas habitables</span></span></li>
+            <li><span><span><a href="./GravedadPlaneta.html">Calcular Gravedad de planetas(aproximada...)</a></span></span></li>
+            <li><span><span><a href="#">Statistics</a></span></span></li>
+            <li><span><span><a href="#">Design</a></span></span></li>
+            <li><span><span><a href="#">Contents</a></span></span></li>
+          </ul>
+        </div>
+        <div id="middle">
+        <form action="../Scripts/Logic/Logic.php" method="POST">
+         <button class="green-button" name="habitables" value="1" type="submit">Buscar planetas habitables</button>
+         <button class="red-button"   name="habitables" value="2" type="submit">Buscar planetas NO habitables</button>
+         <button class="blue-button"  name="habitables" value="3" type="submit">Buscar planetas en tu base de datos</button>
+        </form>
+        </div>
+        <div id="footer"></div>
+      </div>
+      
+</body>
+</html>
