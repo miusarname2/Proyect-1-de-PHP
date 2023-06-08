@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <link rel="stylesheet" href="../Css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+ 
+  <div id="main">
+    <div id="header"> <a href="#" class="logo"></a>
+      <ul id="top-navigation">
+        <li><span><span><a href="../index.html">Buscador de planetas</a></span></span></li>
+        <li><span><span><a href="./verfiReportFirst.html">Verificar primer reporte de sistema solar</a></span></span></li>
+        <li><span><span><a href="./planetas_habitables.html">Verificar planetas habitables</a></span></span></li>
+        <li class="active"><span><span>Calcular Gravedad de planetas(aproximada...)</a></span></span></li>
+        <li><span><span><a href="./MasaNave.html">Calcular masa de flota</a></span></span></li>
+        <li><span><span><a href="./verificarSiExiste.html">Verificar Existencia de planeta</a></span></span></li>
+        <li><span><span><a href="./existeNave.html">Verificar si existe nave en mi flota</a></span></span></li>
+        <li><span><span><a href="./SeleccionarPlanetaR.html">Seleccionar planeta aleatorio...</a></span></span></li>
+        <li><span><span><a href="./limpiarDuplicadosDeAliens.html">Limpiar lista de aliens</a></span></span></li>
+        <li><span><span><a href="./commonplannets.html">Mostrar duplicados</a></span></span></li>
+      </ul>
+    </div>
+    <div id="middle">
+      <div class="row">
+        <form class="col s12" action="../Scripts/Logic/Logic.php" method="POST">
+          <div class="row">
+            <div class="input-field col s12">
+                <label for="PlanetaG">Ingresa el nombre o el id del planeta</label><br>
+                <input type="text" name="PlanetaG">
+                <input type="submit" value="Buscar" class="waves-effect waves-light btn">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+      
+</body>
+</html>
